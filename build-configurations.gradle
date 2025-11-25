@@ -1,0 +1,25 @@
+compileJava {
+    options.compilerArgs << '-parameters'
+}
+
+group = 'com.jpimentel'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+springBoot {
+    buildInfo()
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+jar {
+    enabled = false
+    archivesBaseName = "$archivesBaseName-$buildProfile"
+}
