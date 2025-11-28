@@ -1,7 +1,7 @@
 # 📐 Architecture Document
 
 ## Overview
-This document describes the complete architecture for a real-time multiplayer football grid game using:
+This document describes the complete architecture for a real-time multiplayer counter strike bingo using:
 
 - **React**  
 - **Node.js + Socket.IO**  

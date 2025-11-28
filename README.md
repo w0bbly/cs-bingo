@@ -1,6 +1,6 @@
-# ⚽ Real-Time Football Grid Game
+# ⚽ Counter Strike Bingo
 
-This repository contains the architecture and lifecycle for a real-time multiplayer football grid game.
+This repository contains the architecture and lifecycle for a real-time multiplayer counter strike bingo.
 
 Players join a room using only a **name** and a **room code**, then compete independently by matching players to a 16-tile board. After finishing, results are validated server-side, and a **live leaderboard** updates for all participants.
 
