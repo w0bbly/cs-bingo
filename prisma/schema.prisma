@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Tile {
+  id      Int      @id @default(autoincrement())
+  label   String
+  players PlayerCorrectTile[]
+}
+
+model Player {
+  id      Int      @id @default(autoincrement())
+  name    String
+  meta    Json?
+  tiles   PlayerCorrectTile[]
+}
+
+model PlayerCorrectTile {
+  playerId Int
+  tileId   Int
+
+  player   Player @relation(fields: [playerId], references: [id])
+  tile     Tile   @relation(fields: [tileId], references: [id])
+
+  @@id([playerId, tileId])
+}
